@@ -4,14 +4,14 @@
 <style>
 	body {font-family:georgia;}
 
-  .film{
-    border:1px solid #E77DC2;
+  .film {
+    border: 1px solid #E77DC2;
     border-radius: 5px;
     padding: 5px;
-    margin-bottom:5px;
-    position:relative;   
-  }
-
+    margin-bottom: 5px;
+    position: relative;
+    min-height: 150px;
+}
 
   .pic{
     position:absolute;
@@ -20,7 +20,7 @@
   }
 
   .pic img{
-	max-width:50px;
+	max-width:70px;
   }
 
   
@@ -33,16 +33,10 @@
 function bondTemplate(film){
   return `
   <div class="film">
-      <b> Film</b>: ${film.Film}<br>
       <b> Title</b>: ${film.Title}<br>
-      <b> Year</b>: ${film.Year}<br>
-      <b> Director</b>: ${film.Director}<br>
-      <b> Producers</b>: ${film.Producers}<br>
-      <b> Writers</b>: ${film.Writers}<br>
-      <b> Composer</b>: ${film.Composer}<br>
-      <b> Bond</b>: ${film.Bond}<br>
-      <b> Budget</b>: ${film.Budget}<br>
-      <b> Box Office</b>: ${film.BoxOffice}<br>
+      <b> Artist</b>: ${film.Artist}<br>
+      <b> Cost</b>: ${film.Cost}<br>
+      <b> Note</b>: ${film.Note}<br>
       <div class="pic"><img src="thumbnails/${film.Image}"></div>
   </div>
   `
